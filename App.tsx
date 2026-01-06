@@ -15,7 +15,7 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 function TabNavigator() {
-  const { isDarkMode, colors } = useTheme();
+  const { colors } = useTheme();
 
   return (
     <Tab.Navigator
@@ -62,10 +62,13 @@ function TabNavigator() {
 }
 
 function RootNavigator() {
-    const { isDarkMode } = useTheme();
+    const { isDarkMode, colors } = useTheme();
     return (
         <NavigationContainer theme={isDarkMode ? DarkTheme : DefaultTheme}>
-            <StatusBar barStyle={isDarkMode ? "light-content" : "dark-content"} />
+            <StatusBar 
+              barStyle={isDarkMode ? "light-content" : "dark-content"} 
+              backgroundColor={colors.background}
+            />
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="MainTabs" component={TabNavigator} />
                 <Stack.Screen name="ClubDetails" component={ClubDetailsScreen} options={{ presentation: 'card' }} />
