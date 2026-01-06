@@ -63,7 +63,8 @@ export const ClubsScreen = ({ navigation }: any) => {
             <View style={styles.imageContainer}>
               <Image source={{ uri: club.imageUrl }} style={styles.image} />
               <View style={styles.ratingBadge}>
-                <Star size={12} color="#FB923C" fill="#FB923C" style={{ marginRight: 4 }} />
+                {/* Removed fill prop from Star to prevent native type errors */}
+                <Star size={12} color="#FB923C" style={{ marginRight: 4 }} />
                 <Text style={styles.ratingText}>{club.rating}</Text>
               </View>
               {club.type === 'Indoor' && (

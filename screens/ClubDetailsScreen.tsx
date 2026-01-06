@@ -64,7 +64,8 @@ export const ClubDetailsScreen = ({ route, navigation }: any) => {
               <Text style={styles.badgeText}>{club.area}</Text>
             </View>
             <View style={[styles.badge, { marginLeft: 8 }]}>
-              <Star size={12} color="#FACC15" fill="#FACC15" style={{ marginRight: 4 }} />
+              {/* Removed fill prop */}
+              <Star size={12} color="#FACC15" style={{ marginRight: 4 }} />
               <Text style={styles.badgeText}>{club.rating}</Text>
             </View>
           </Row>

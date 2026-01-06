@@ -41,7 +41,8 @@ export const ProfileScreen = () => {
                <Text style={styles.levelValue}>{USER.rating}</Text>
              </View>
              <View style={styles.zapIcon}>
-               <Zap size={24} color="#FACC15" fill="#FACC15" />
+               {/* Removed fill prop */}
+               <Zap size={24} color="#FACC15" />
              </View>
            </Row>
            <View style={styles.progressTrack}>

@@ -1,78 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>PADL</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              primary: '#2C6BFF', // Playtomic-like Vibrant Blue
-              'primary-dark': '#0044CC',
-              secondary: '#64748B', // Cool Gray
-              background: '#F1F5F9', // Slate 100
-              surface: '#FFFFFF',
-              success: '#10B981',
-              warning: '#F59E0B',
-            },
-            boxShadow: {
-              'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-              'glow': '0 4px 14px 0 rgba(44, 107, 255, 0.39)',
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
-      body {
-        -webkit-tap-highlight-color: transparent;
-      }
-      /* Smooth transitions */
-      * {
-        transition-property: background-color, border-color, color, fill, stroke, transform, opacity;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 200ms;
-      }
-      .safe-bottom {
-        padding-bottom: env(safe-area-inset-bottom);
-      }
-    </style>
-  <script type="importmap">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1.00001, viewport-fit=cover">
+  <title>PADL</title>
+  <style>
+    html, body, #root {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; 
+      background-color: #F8FAFC;
+    }
+  </style>
+<script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-native": "https://esm.sh/react-native@^0.83.1",
     "expo": "https://esm.sh/expo@^54.0.30",
-    "@react-navigation/native": "https://esm.sh/@react-navigation/native@^7.1.26",
-    "@react-navigation/native-stack": "https://esm.sh/@react-navigation/native-stack@^7.9.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-native": "https://esm.sh/react-native@^0.83.1",
     "react-native-safe-area-context": "https://esm.sh/react-native-safe-area-context@^5.6.2",
+    "react/": "https://esm.sh/react@^19.2.3/",
     "lucide-react-native": "https://esm.sh/lucide-react-native@^0.562.0",
-    "@react-navigation/bottom-tabs": "https://esm.sh/@react-navigation/bottom-tabs@^7.9.0"
+    "@react-navigation/native": "https://esm.sh/@react-navigation/native@^7.1.26",
+    "@react-navigation/bottom-tabs": "https://esm.sh/@react-navigation/bottom-tabs@^7.9.0",
+    "@react-navigation/native-stack": "https://esm.sh/@react-navigation/native-stack@^7.9.0"
   }
 }
 </script>
 </head>
-  <body class="bg-gray-100 text-slate-900 select-none overflow-hidden fixed inset-0">
-    <div id="root" class="h-full w-full"></div>
-  </body>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
